@@ -11,20 +11,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password Manager"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/enterPinTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/enterPinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter 4-digit PIN number"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/pinEditText"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/pinEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberPassword"
+        app:layout_constraintTop_toBottomOf="@+id/enterPinTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Enter PIN"
+        app:layout_constraintBottom_toTopOf="@+id/logInButton"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"/>
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/logInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinEditText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

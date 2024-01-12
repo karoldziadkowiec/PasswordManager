@@ -16,12 +16,23 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         Button addAccountButton = findViewById(R.id.addAccountButton);
+        Button logOutButton = findViewById(R.id.logOutButton);
+
 
         addAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Obsługa kliknięcia przycisku "Add Account"
                 Intent intent = new Intent(ListActivity.this, AddAccountActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        logOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Obsługa kliknięcia przycisku "Log out"
+                Intent intent = new Intent(ListActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

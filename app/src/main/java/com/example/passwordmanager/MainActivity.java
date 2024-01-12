@@ -2,6 +2,7 @@ package com.example.passwordmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,12 +15,13 @@ public class MainActivity extends AppCompatActivity {
     List<Account> accounts = prepareData();
     Button goToListActivityButton;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        goToListActivityButton = findViewById(R.id.button);
+        goToListActivityButton = findViewById(R.id.logInButton);
 
         // Dodaj obsługę kliknięcia przycisku
         goToListActivityButton.setOnClickListener(new View.OnClickListener() {
