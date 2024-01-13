@@ -4,63 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#673AB7"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password Manager"
-        app:layout_constraintBottom_toTopOf="@+id/enterPinTextView"
+        android:layout_marginTop="32dp"
+        android:background="#FF0000"
+        android:backgroundTint="#FFF9F9"
+        android:fontFamily="@font/comic_neue_light"
+        android:text=" Password Manager "
+        android:textColor="#402471"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/enterPinTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter 4-digit PIN number"
-        app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/pinEditText"
-        android:layout_marginTop="16dp"/>
 
     <EditText
         android:id="@+id/pinEditText"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:inputType="numberPassword"
-        app:layout_constraintTop_toBottomOf="@+id/enterPinTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center"
         android:hint="Enter PIN"
-        app:layout_constraintBottom_toTopOf="@+id/logInButton"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"/>
-
-    <Button
-        android:id="@+id/logInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log in"
-        app:layout_constraintTop_toBottomOf="@+id/pinEditText"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="numberPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/exitButton"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterPinTextView" />
 
     <Button
         android:id="@+id/exitButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#422378"
+        android:text="Exit"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logInButton"
+        app:layout_constraintVertical_weight="1" />
+
+    <Button
+        android:id="@+id/logInButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Log in"
+        android:textColor="#673AB7"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinEditText"
+        app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:id="@+id/enterPinTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Exit"
-        app:layout_constraintTop_toBottomOf="@+id/logInButton"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="152dp"
+        android:text="Enter 4-digit PIN number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
