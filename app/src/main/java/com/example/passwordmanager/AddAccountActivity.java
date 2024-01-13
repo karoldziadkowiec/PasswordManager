@@ -48,7 +48,7 @@ public class AddAccountActivity extends AppCompatActivity {
                     intent.putExtra("accounts", (Serializable) accounts);
                     startActivity(intent);
 
-                    showMessage("The account has been added.");
+                    showMessage("The " + newAccount.getPageName() + " account has been added.");
                 } else {
                     showMessage("Please fill in all fields.");
                 }

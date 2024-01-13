@@ -112,6 +112,8 @@ public class ListActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     accounts.remove(position);
                     notifyDataSetChanged();
+
+                    showMessage("The " + account.getPageName() + " account has been removed.");
                 }
             });
 

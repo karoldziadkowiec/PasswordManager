@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String enteredPin = pinEditText.getText().toString();
-                if (enteredPin.equals("")) {
+                if (enteredPin.equals("7777")) {
                     Intent intent = new Intent(MainActivity.this, ListActivity.class);
                     intent.putExtra("accounts", (Serializable) accounts);
                     startActivity(intent);
