@@ -1,6 +1,8 @@
 package com.example.passwordmanager;
 
-public class Account {
+import java.io.Serializable;
+
+public class Account implements Serializable {
     private int id;
     private String pageName;
     private String login;
@@ -43,5 +45,10 @@ public class Account {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return pageName;
     }
 }
